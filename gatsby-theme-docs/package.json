@@ -1,0 +1,55 @@
+{
+  "name": "gatsby-theme-docs",
+  "author": "Youssouf El Azizi <youssoufelazizi@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yjose/gatsby-theme-docs.git"
+  },
+  "version": "1.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "develop": "gatsby develop"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.13.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "gatsby": "^2.13.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^1.0.21",
+    "@mdx-js/react": "^1.0.21",
+    "change-case": "^3.1.0",
+    "gatsby-mdx": "^1.0.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-mdx": "^1.0.19",
+    "gatsby-plugin-react-helmet": "^3.1.2",
+    "gatsby-plugin-sass": "^2.1.0",
+    "gatsby-plugin-theme-ui": "^0.2.2",
+    "gatsby-remark-prismjs": "^3.0.2",
+    "gatsby-source-filesystem": "^2.1.0",
+    "gatsby-transformer-json": "^2.2.2",
+    "gatsby-transformer-remark": "^2.5.0",
+    "infima": "^0.2.0-alpha.2",
+    "node-sass": "^4.12.0",
+    "prism-react-renderer": "^0.1.7",
+    "prism-themes": "^1.1.0",
+    "prismjs": "^1.16.0",
+    "react-helmet": "^5.2.0",
+    "react-live": "^2.1.2",
+    "reactjs-popup": "^1.4.1",
+    "theme-ui": "^0.2.2"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin"
+  ]
+}

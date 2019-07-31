@@ -1,0 +1,11 @@
+{
+  "basePath": "docs",
+  "docs": [
+    {
+      "id": "welcome"
+    },
+    {
+      "id": "getting-started"
+    }
+  ]
+}
