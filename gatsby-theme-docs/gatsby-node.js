@@ -1,36 +1,13 @@
 const fs = require("fs")
 // Make sure the data directory exists
-const content = `---
-id: welcome
-title: Welcome
----
-
-## Introduction
-
-Reactjs-popup is a simple react popup component with a lot of benefits :
-
-- Built with react fragment that’s mean no additional wrapper Divs in your code or in the trigger element. 😮
-- Does not inject HTML outside your app root. 📦
-- Function as children pattern to take control over your popup anywhere in your code. 💪
-- Modal, Tooltip, Menu : All in one 🏋️
-- Full style customization 👌
-- Easy to use. 🚀
-- IE Support. 🚀
-- TypeScript Support 👌
-- All these clocks in at around 3 kB zipped. ⚡️
-
-Requires React >= 16.0
-`
-const createExample = contentPath => {
-  fs.mkdirSync(contentPath)
-  fs.writeFileSync(`${contentPath}/example.md`, content)
-}
+const { createExample } = require("./createExamples")
 
 exports.onPreBootstrap = ({ reporter }, options) => {
   const contentPath = options.contentPath || "docs"
+  const config = options.configFile || "config.json"
   if (!fs.existsSync(contentPath)) {
     reporter.info(`creating the ${contentPath} directory`)
-    createExample(contentPath)
+    createExample(contentPath, config)
   }
 }
 
@@ -63,6 +40,16 @@ exports.createPages = async ({ actions, graphql, reporter }, options) => {
           }
         }
       }
+      allDemoJson {
+        edges {
+          node {
+            id
+            docs {
+              id
+            }
+          }
+        }
+      }
     }
   `)
   if (result.errors) {
@@ -70,9 +57,20 @@ exports.createPages = async ({ actions, graphql, reporter }, options) => {
     return
   }
   const pages = result.data.allMdx.edges
+  const sidebarItemsId = result.data.allDemoJson.edges[0].node.docs[0].id
+  // get the first sidebar element and /docs
+  const f = pages.filter(
+    ({ node: { frontmatter } }) => (frontmatter.id = sidebarItemsId)
+  )[0].node
+  const fSlug = `${basePath}/${slugify(f.frontmatter.title)}`
+
+  actions.createRedirect({
+    fromPath: basePath,
+    toPath: fSlug,
+    isPermanent: true,
+  })
 
   pages.forEach(({ node }) => {
-    console.log(node)
     const slug = `${basePath}/${slugify(node.frontmatter.title)}`
     actions.createPage({
       path: slug,

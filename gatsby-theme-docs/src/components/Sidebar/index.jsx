@@ -45,7 +45,6 @@ const Sidebar = () => (
         ({ node: { frontmatter } }) => frontmatter
       )
       const { docs, basePath } = allDemoJson.edges[0].node
-      console.log(allDemoJson.edges[0].node)
 
       const routes = normalizeRoutes(docs, frontmatters, basePath)
       return (

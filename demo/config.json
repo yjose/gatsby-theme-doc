@@ -1,0 +1,29 @@
+{
+  "basePath": "docs",
+  "docs": [
+    {
+      "id": "welcome"
+    },
+    {
+      "id": "getting-started"
+    },
+    {
+      "id": "config-site"
+    },
+    {
+      "id": "config-mdx"
+    }
+  ],
+  "config": {
+    "name": "📖  gatsby-theme-docs",
+    "nav": {
+      "links": [
+        { "label": "Docs", "url": "/docs" },
+        {
+          "label": "Github",
+          "url": "https://github.com/yjose/gatsby-theme-docs"
+        }
+      ]
+    }
+  }
+}

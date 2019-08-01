@@ -3,28 +3,30 @@ id: getting-started
 title: Getting Started
 ---
 
-## Getting started
+### How to Use In Your Gatsby App
 
-Reactjs-popup is a simple react popup component with a lot of benefits :
+Install theme
 
-- Built with react fragment that’s mean no additional wrapper Divs in your code or in the trigger element. 😮
-- Does not inject HTML outside your app root. 📦
-- Function as children pattern to take control over your popup anywhere in your code. 💪
-- Modal, Tooltip, Menu : All in one 🏋️
-- Full style customization 👌
-- Easy to use. 🚀
-- IE Support. 🚀
-- TypeScript Support 👌
-- All these clocks in at around 3 kB zipped. ⚡️
+```
+yarn add gatsby-theme-docs
 
-Requires React >= 16.0
+```
+
+And add it to your config:
 
 ```js
-const slugify = (str, basePath) => {
-  const slug = str
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-\$)+/g, "")
-  return `${basePath}/${slug}`.replace(/\/\/+/g, "/")
-}
+// In your gatsby-config.js
+module.exports = {
+  plugins: [
+    // You can should only have one instance of this plugin
+    {
+      resolve: `gatsby-theme-docs`,
+      options: {
+        contentPath: "./docs", // mdx files
+        basePath: "/docs"
+        config:'config.json' // config file
+      }
+    }
+  ]
+};
 ```

@@ -6,47 +6,44 @@ import Layout from "../components/Layout"
 import mdxComponents from "../components/mdx"
 import Sidebar from "../components/Sidebar"
 
-export default ({ data: { mdx } }) => (
-  <Layout>
-    <div className="main">
-      <Sidebar />
-      <div className="markdown markdown-body">
-        <a
-          className=" edit-page"
-          href="https://github.com/yjose/reactjs-popup/tree/master/docs/src/mdPages/"
-        >
-          EDIT
-        </a>
+export default ({ data: { mdx }, ...props }) => {
+  console.log(props)
 
-        <MDXProvider components={mdxComponents}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </MDXProvider>
-        <div className="margin-top--xl margin-bottom--lg">
-          {/* <nav className="pagination-nav">
-            <div className="pagination-nav__item">
-              {prev && (
-                <Link className="pagination-nav__link" to={`/${prev.path}/`}>
-                  <h5 className="pagination-nav__link--sublabel">Previous</h5>
-                  <h4 className="pagination-nav__link--label">
-                    « {prev.name}{" "}
-                  </h4>
-                </Link>
-              )}
-            </div>
-            <div className="pagination-nav__item pagination-nav__item--next">
-              {next && (
-                <Link className="pagination-nav__link" to={`/${next.path}/`}>
-                  <h5 className="pagination-nav__link--sublabel">Next</h5>
-                  <h4 className="pagination-nav__link--label">{next.name} »</h4>
-                </Link>
-              )}
-            </div>
-          </nav> */}
+  return (
+    <Layout>
+      <div className="main">
+        <Sidebar />
+        <div className="markdown markdown-body">
+          <MDXProvider components={mdxComponents}>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </MDXProvider>
+          <div className="margin-top--xl margin-bottom--lg">
+            {/* <nav className="pagination-nav">
+              <div className="pagination-nav__item">
+                {prev && (
+                  <Link className="pagination-nav__link" to={`/${prev.path}/`}>
+                    <h5 className="pagination-nav__link--sublabel">Previous</h5>
+                    <h4 className="pagination-nav__link--label">
+                      « {prev.name}{" "}
+                    </h4>
+                  </Link>
+                )}
+              </div>
+              <div className="pagination-nav__item pagination-nav__item--next">
+                {next && (
+                  <Link className="pagination-nav__link" to={`/${next.path}/`}>
+                    <h5 className="pagination-nav__link--sublabel">Next</h5>
+                    <h4 className="pagination-nav__link--label">{next.name} »</h4>
+                  </Link>
+                )}
+              </div>
+            </nav> */}
+          </div>
         </div>
       </div>
-    </div>
-  </Layout>
-)
+    </Layout>
+  )
+}
 
 export const pageQuery = graphql`
   query($id: String!) {

@@ -1,7 +1,7 @@
 module.exports = ({
   contentPath = "data",
   basePath = "docs",
-  sidebarPath = "sidebar.json",
+  configFile = "config.json",
 }) => ({
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -17,7 +17,7 @@ module.exports = ({
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: sidebarPath,
+        path: configFile,
       },
     },
     {

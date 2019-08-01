@@ -1,3 +1,8 @@
+---
+id: welcome
+title: Introduction
+---
+
 # Gatsby Theme Docs
 
 This repo is a yarn workspace.
@@ -42,7 +47,7 @@ module.exports = {
 
 A page Docs should look like the following :
 
-```md
+```
 ---
 id: welcome
 title: Welcome
