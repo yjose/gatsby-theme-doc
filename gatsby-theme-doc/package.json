@@ -6,7 +6,7 @@
     "url": "https://github.com/yjose/gatsby-theme-doc.git"
   },
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
