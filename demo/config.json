@@ -18,7 +18,7 @@
     "name": "📖  gatsby-theme-docs",
     "nav": {
       "links": [
-        { "label": "Docs", "url": "/docs" },
+        { "label": "Docs", "url": "/docs/introduction" },
         {
           "label": "Github",
           "url": "https://github.com/yjose/gatsby-theme-docs"

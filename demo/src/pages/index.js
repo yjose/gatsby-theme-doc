@@ -10,7 +10,10 @@ export default () => (
           Create Your Library Docs using Gatsby theme
         </h1>
         <div className="index-ctas">
-          <Link className="index-ctas-get-started-button" to="/docs/welcome">
+          <Link
+            className="index-ctas-get-started-button"
+            to="/docs/introduction"
+          >
             Get Started
           </Link>
         </div>
