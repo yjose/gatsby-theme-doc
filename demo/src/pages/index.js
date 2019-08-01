@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import Layout from "gatsby-theme-docs/src/components/Layout"
+import Layout from "../../../gatsby-theme-doc/src/components/Layout"
 
 export default () => (
   <Layout>

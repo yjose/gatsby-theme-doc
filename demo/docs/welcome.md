@@ -3,11 +3,11 @@ id: welcome
 title: Introduction
 ---
 
-# Gatsby Theme Docs
+# Gatsby Theme Doc
 
 This repo is a yarn workspace.
 
-Live Demo: https://gatsby-theme-docs.netlify.com or with the live reactjs-popup website https://react-popup.elazizi.com/
+Live Demo: https://gatsby-theme-doc.netlify.com or with the live reactjs-popup website https://react-popup.elazizi.com/
 
 ### Features:
 
@@ -20,7 +20,7 @@ Live Demo: https://gatsby-theme-docs.netlify.com or with the live reactjs-popup 
 Install theme
 
 ```
-yarn add gatsby-theme-docs
+yarn add gatsby-theme-doc
 
 ```
 
@@ -32,7 +32,7 @@ module.exports = {
   plugins: [
     // You can should only have one instance of this plugin
     {
-      resolve: `gatsby-theme-docs`,
+      resolve: `gatsby-theme-doc`,
       options: {
         contentPath: "./docs", // mdx files
         basePath: "/docs"
@@ -70,13 +70,13 @@ and the config file should look like:
     }
   ],
   "config": {
-    "name": "📖  gatsby-theme-docs",
+    "name": "📖  gatsby-theme-doc",
     "nav": {
       "links": [
         { "label": "Docs", "url": "/docs" },
         {
           "label": "Github",
-          "url": "https://github.com/yjose/gatsby-theme-docs"
+          "url": "https://github.com/yjose/gatsby-theme-doc"
         }
       ]
     }

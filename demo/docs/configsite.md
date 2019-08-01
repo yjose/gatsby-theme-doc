@@ -19,13 +19,13 @@ the config file should look like:
     }
   ],
   "config": {
-    "name": "📖  gatsby-theme-docs",
+    "name": "📖  gatsby-theme-doc",
     "nav": {
       "links": [
         { "label": "Docs", "url": "/docs" },
         {
           "label": "Github",
-          "url": "https://github.com/yjose/gatsby-theme-docs"
+          "url": "https://github.com/yjose/gatsby-theme-doc"
         }
       ]
     }

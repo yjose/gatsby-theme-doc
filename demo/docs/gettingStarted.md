@@ -8,7 +8,7 @@ title: Getting Started
 Install theme
 
 ```
-yarn add gatsby-theme-docs
+yarn add gatsby-theme-doc
 
 ```
 
@@ -20,7 +20,7 @@ module.exports = {
   plugins: [
     // You can should only have one instance of this plugin
     {
-      resolve: `gatsby-theme-docs`,
+      resolve: `gatsby-theme-doc`,
       options: {
         contentPath: "./docs", // mdx files
         basePath: "/docs"

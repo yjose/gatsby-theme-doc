@@ -19,13 +19,13 @@ const jsonFile = `
     }
   ],
   "config": {
-    "name": " gatsby-theme-docs",
+    "name": " gatsby-theme-doc",
     "nav": {
       "links": [
         { "label": "docs", "url": "/docs" },
         {
           "label": "github",
-          "url": "https://github.com/yjose/gatsby-theme-docs"
+          "url": "https://github.com/yjose/gatsby-theme-doc"
         }
       ]
     }

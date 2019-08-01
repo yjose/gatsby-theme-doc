@@ -1,10 +1,11 @@
 {
-  "name": "gatsby-theme-docs",
+  "name": "gatsby-theme-doc",
   "author": "Youssouf El Azizi <youssoufelazizi@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yjose/gatsby-theme-docs.git"
+    "url": "https://github.com/yjose/gatsby-theme-doc.git"
   },
+  "private": false,
   "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
