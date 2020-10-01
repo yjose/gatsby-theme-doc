@@ -30,7 +30,7 @@ module.exports = {
       resolve: `gatsby-theme-doc`,
       options: {
         contentPath: "./docs", // mdx files
-        basePath: "/docs"
+        basePath: "/docs",
         config:'config.json' // config file
       }
     }
